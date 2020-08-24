@@ -41,6 +41,7 @@ class QiniuFilesystemServiceProvider extends ServiceProvider
                     $config['secret_key'],
                     $config['bucket'],
                     $domains,
+                    isset($config['default_domain_type']) ? $config['default_domain_type'] : 'default',
                     isset($config['notify_url']) ? $config['notify_url'] : null,
                     isset($config['access']) ? $config['access'] : 'public',
                     isset($config['hotlink_prevention_key']) ? $config['hotlink_prevention_key'] : null

@@ -27,6 +27,7 @@ class QiniuAdapter extends AbstractAdapter
     private $secret_key = null;
     private $bucket = null;
     private $domains = null;
+    private $default_domain_type = 'default';
     private $notify_url = null; //持久化处理后的回调地址
     private $access = null;
 
@@ -45,6 +46,7 @@ class QiniuAdapter extends AbstractAdapter
         $secret_key,
         $bucket,
         $domains,
+        $default_domain_type,
         $notify_url = null,
         $access = self::ACCESS_PUBLIC,
         $hotlinkPreventionKey = null
@@ -53,6 +55,7 @@ class QiniuAdapter extends AbstractAdapter
         $this->secret_key = $secret_key;
         $this->bucket = $bucket;
         $this->domains = $domains;
+        $this->default_domain_type = $default_domain_type;
         $this->setPathPrefix('http://' . $this->domains['default']);
         $this->setDomainPrefix('http://' . $this->domains['default'], 'default');
         $this->setDomainPrefix('https://' . $this->domains['https'], 'https');
@@ -565,13 +568,15 @@ class QiniuAdapter extends AbstractAdapter
      */
     public function getUrl($path)
     {
+        $domain_type = $this->default_domain_type;
+
         if (is_string($path)) {
-            return $this->downloadUrl($path, 'https')->getUrl();
+            return $this->downloadUrl($path, $domain_type)->getUrl();
             // return $this->downloadUrl($path, 'default')->getUrl();
         }
 
         if (is_array($path)) {
-            return $this->downloadUrl($path['path'], 'https')->getUrl();
+            return $this->downloadUrl($path['path'], $domain_type)->getUrl();
             // return $this->downloadUrl($path['path'], $path['domainType'])->getUrl();
         }
 
