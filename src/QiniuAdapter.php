@@ -54,7 +54,7 @@ class QiniuAdapter extends AbstractAdapter
         $this->bucket = $bucket;
         $this->domains = $domains;
         $this->setPathPrefix('http://' . $this->domains['default']);
-        $this->setDomainPrefix('https://' . $this->domains['default'], 'default');
+        $this->setDomainPrefix('http://' . $this->domains['default'], 'default');
         $this->setDomainPrefix('https://' . $this->domains['https'], 'https');
         $this->setDomainPrefix('http://' . $this->domains['custom'], 'custom');
         $this->notify_url = $notify_url;
@@ -566,11 +566,13 @@ class QiniuAdapter extends AbstractAdapter
     public function getUrl($path)
     {
         if (is_string($path)) {
-            return $this->downloadUrl($path, 'default')->getUrl();
+            return $this->downloadUrl($path, 'https')->getUrl();
+            // return $this->downloadUrl($path, 'default')->getUrl();
         }
 
         if (is_array($path)) {
-            return $this->downloadUrl($path['path'], $path['domainType'])->getUrl();
+            return $this->downloadUrl($path['path'], 'https')->getUrl();
+            // return $this->downloadUrl($path['path'], $path['domainType'])->getUrl();
         }
 
         return $this->downloadUrl('', 'default')->getUrl();
