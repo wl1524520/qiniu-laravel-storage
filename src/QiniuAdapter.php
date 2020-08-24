@@ -54,7 +54,7 @@ class QiniuAdapter extends AbstractAdapter
         $this->bucket = $bucket;
         $this->domains = $domains;
         $this->setPathPrefix('http://' . $this->domains['default']);
-        $this->setDomainPrefix('http://' . $this->domains['default'], 'default');
+        $this->setDomainPrefix('https://' . $this->domains['default'], 'default');
         $this->setDomainPrefix('https://' . $this->domains['https'], 'https');
         $this->setDomainPrefix('http://' . $this->domains['custom'], 'custom');
         $this->notify_url = $notify_url;
