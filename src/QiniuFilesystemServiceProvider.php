@@ -1,23 +1,23 @@
-<?php namespace zgldh\QiniuStorage;
+<?php namespace wl1524520\QiniuStorage;
 
 use Illuminate\Support\Facades\Storage;
 use League\Flysystem\Filesystem;
 use Illuminate\Support\ServiceProvider;
-use zgldh\QiniuStorage\Plugins\DownloadUrl;
-use zgldh\QiniuStorage\Plugins\Fetch;
-use zgldh\QiniuStorage\Plugins\ImageExif;
-use zgldh\QiniuStorage\Plugins\ImageInfo;
-use zgldh\QiniuStorage\Plugins\AvInfo;
-use zgldh\QiniuStorage\Plugins\ImagePreviewUrl;
-use zgldh\QiniuStorage\Plugins\LastReturn;
-use zgldh\QiniuStorage\Plugins\PersistentFop;
-use zgldh\QiniuStorage\Plugins\PersistentStatus;
-use zgldh\QiniuStorage\Plugins\PrivateDownloadUrl;
-use zgldh\QiniuStorage\Plugins\Qetag;
-use zgldh\QiniuStorage\Plugins\UploadToken;
-use zgldh\QiniuStorage\Plugins\PrivateImagePreviewUrl;
-use zgldh\QiniuStorage\Plugins\VerifyCallback;
-use zgldh\QiniuStorage\Plugins\WithUploadToken;
+use wl1524520\QiniuStorage\Plugins\DownloadUrl;
+use wl1524520\QiniuStorage\Plugins\Fetch;
+use wl1524520\QiniuStorage\Plugins\ImageExif;
+use wl1524520\QiniuStorage\Plugins\ImageInfo;
+use wl1524520\QiniuStorage\Plugins\AvInfo;
+use wl1524520\QiniuStorage\Plugins\ImagePreviewUrl;
+use wl1524520\QiniuStorage\Plugins\LastReturn;
+use wl1524520\QiniuStorage\Plugins\PersistentFop;
+use wl1524520\QiniuStorage\Plugins\PersistentStatus;
+use wl1524520\QiniuStorage\Plugins\PrivateDownloadUrl;
+use wl1524520\QiniuStorage\Plugins\Qetag;
+use wl1524520\QiniuStorage\Plugins\UploadToken;
+use wl1524520\QiniuStorage\Plugins\PrivateImagePreviewUrl;
+use wl1524520\QiniuStorage\Plugins\VerifyCallback;
+use wl1524520\QiniuStorage\Plugins\WithUploadToken;
 
 class QiniuFilesystemServiceProvider extends ServiceProvider
 {

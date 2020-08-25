@@ -17,6 +17,8 @@
    
 
 ## 更新
+ v0.11
+  更改命名空间防止包冲突
 
  v0.10
   支持“公开空间”的 CDN 时间戳防盗链
@@ -42,8 +44,8 @@
 
 ## 安装
 
- - ```composer require zgldh/qiniu-laravel-storage```
- - ```config/app.php``` 里面的 ```providers``` 数组， 加上一行 ```zgldh\QiniuStorage\QiniuFilesystemServiceProvider::class```
+ - ```composer require wl1524520/qiniu-laravel-storage```
+ - ```config/app.php``` 里面的 ```providers``` 数组， 加上一行 ```wl1524520\QiniuStorage\QiniuFilesystemServiceProvider::class```
  - ```config/filesystem.php``` 里面的 ```disks```数组加上：
 
 ```php
@@ -56,7 +58,8 @@
                 'default'   => 'xxxxx.com1.z0.glb.clouddn.com', //你的七牛域名
                 'https'     => 'dn-yourdomain.qbox.me',         //你的HTTPS域名
                 'custom'    => 'static.abc.com',                //Useless 没啥用，请直接使用上面的 default 项
-             ],
+            ],
+            'default_domain_type' => 'https', // 返回地址的类型
             'access_key'=> '',  //AccessKey
             'secret_key'=> '',  //SecretKey
             'bucket'    => '',  //Bucket名字
@@ -138,7 +141,7 @@
 
 ```php
 
-    use zgldh\QiniuStorage\QiniuStorage;
+    use wl1524520\QiniuStorage\QiniuStorage;
 
     $disk = QiniuStorage::disk('qiniu');
     $disk->exists('file.jpg');                      //文件是否存在

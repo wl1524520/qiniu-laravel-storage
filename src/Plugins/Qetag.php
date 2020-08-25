@@ -6,7 +6,7 @@
  * Time: 16:42
  */
 
-namespace zgldh\QiniuStorage\Plugins;
+namespace wl1524520\QiniuStorage\Plugins;
 
 use League\Flysystem\Plugin\AbstractPlugin;
 
@@ -15,7 +15,7 @@ use League\Flysystem\Plugin\AbstractPlugin;
  * 得到最后一次上传文件的 Qetag <br>
  * $disk        = \Storage::disk('qiniu'); <br>
  * $re          = $disk->getDriver()->qetag(); <br>
- * @package zgldh\QiniuStorage\Plugins
+ * @package wl1524520\QiniuStorage\Plugins
  */
 class Qetag extends AbstractPlugin
 {

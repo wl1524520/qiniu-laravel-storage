@@ -17,10 +17,10 @@
       "role": "Original Developer"
     },
     {
-      "name": "abcsun",
-      "email": "chenglongsun_nj@163.com",
+      "name": "wl1524520",
+      "email": "wl1524520@gmail.com",
       "role": "Developer",
-      "homepage": "http://github.com/abcsun"
+      "homepage": "https://wanglu.info"
     }
   ],
   "require": {
@@ -30,13 +30,13 @@
   },
   "autoload": {
     "psr-4": {
-      "zgldh\\QiniuStorage\\": "src/"
+      "wl1524520\\QiniuStorage\\": "src/"
     }
   },
   "extra": {
     "laravel": {
       "providers": [
-        "zgldh\\QiniuStorage\\QiniuFilesystemServiceProvider"
+        "wl1524520\\QiniuStorage\\QiniuFilesystemServiceProvider"
       ]
     }
   }

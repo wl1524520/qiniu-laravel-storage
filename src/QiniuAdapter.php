@@ -1,4 +1,4 @@
-<?php namespace zgldh\QiniuStorage;
+<?php namespace wl1524520\QiniuStorage;
 
 use League\Flysystem\Adapter\AbstractAdapter;
 use League\Flysystem\Adapter\Polyfill\NotSupportingVisibilityTrait;

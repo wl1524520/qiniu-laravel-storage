@@ -6,7 +6,7 @@
  * Time: 16:42
  */
 
-namespace zgldh\QiniuStorage\Plugins;
+namespace wl1524520\QiniuStorage\Plugins;
 
 use League\Flysystem\Plugin\AbstractPlugin;
 
@@ -15,7 +15,7 @@ use League\Flysystem\Plugin\AbstractPlugin;
  * 验证回调是否正确 <br>
  * $disk        = \Storage::disk('qiniu'); <br>
  * $re          = $disk->getDriver()->verifyCallback('application/x-www-form-urlencoded', $request->header('Authorization'), 'callback url', $request->getContent()); <br>
- * @package zgldh\QiniuStorage\Plugins
+ * @package wl1524520\QiniuStorage\Plugins
  */
 class VerifyCallback extends AbstractPlugin
 {

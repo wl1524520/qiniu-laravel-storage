@@ -6,7 +6,7 @@
      * Time: 16:42
      */
 
-    namespace zgldh\QiniuStorage\Plugins;
+    namespace wl1524520\QiniuStorage\Plugins;
 
     use League\Flysystem\Plugin\AbstractPlugin;
 
@@ -15,7 +15,7 @@
      * 得到私有资源下载地址 <br>
      * $disk        = \Storage::disk('qiniu'); <br>
      * $re          = $disk->getDriver()->privateDownloadUrl('foo/bar1.css'); <br>
-     * @package zgldh\QiniuStorage\Plugins
+     * @package wl1524520\QiniuStorage\Plugins
      */
     class PrivateDownloadUrl extends AbstractPlugin
     {
