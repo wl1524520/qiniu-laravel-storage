@@ -17,8 +17,8 @@ use League\Flysystem\Plugin\AbstractPlugin;
  * $re          = $disk->getDriver()->imageExif('foo/bar1.css'); <br>
  * @package wl1524520\QiniuStorage\Plugins
  */
-class ImageExif extends AbstractPlugin {
-
+class ImageExif extends AbstractPlugin
+{
     /**
      * Get the method name.
      *

@@ -1,4 +1,6 @@
-<?php namespace wl1524520\QiniuStorage;
+<?php
+
+namespace wl1524520\QiniuStorage;
 
 use JsonSerializable;
 

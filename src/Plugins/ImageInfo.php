@@ -17,8 +17,8 @@ use League\Flysystem\Plugin\AbstractPlugin;
  * $re          = $disk->getDriver()->imageInfo('foo/bar1.css'); <br>
  * @package wl1524520\QiniuStorage\Plugins
  */
-class ImageInfo extends AbstractPlugin {
-
+class ImageInfo extends AbstractPlugin
+{
     /**
      * Get the method name.
      *

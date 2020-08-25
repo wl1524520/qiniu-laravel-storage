@@ -17,8 +17,8 @@ use League\Flysystem\Plugin\AbstractPlugin;
  * $re          = $disk->getDriver()->persistentStatus('foo/bar1.css'); <br>
  * @package wl1524520\QiniuStorage\Plugins
  */
-class PersistentStatus extends AbstractPlugin {
-
+class PersistentStatus extends AbstractPlugin
+{
     /**
      * Get the method name.
      *

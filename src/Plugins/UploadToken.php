@@ -17,8 +17,8 @@ use League\Flysystem\Plugin\AbstractPlugin;
  * $re          = $disk->getDriver()->uploadToken('foo/bar1.css'); <br>
  * @package wl1524520\QiniuStorage\Plugins
  */
-class UploadToken extends AbstractPlugin {
-
+class UploadToken extends AbstractPlugin
+{
     /**
      * Get the method name.
      *
